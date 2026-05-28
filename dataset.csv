@@ -1,0 +1,31 @@
+fever,cough,headache,vomiting,fatigue,disease
+1,1,1,0,1,Flu
+1,1,0,0,1,Cold
+1,0,1,1,1,Malaria
+0,1,1,0,0,Allergy
+1,0,0,1,1,Food Poisoning
+0,0,1,0,1,Migraine
+1,1,1,1,1,Dengue
+0,1,0,0,0,Cough
+1,0,1,0,1,Typhoid
+0,0,0,1,1,Stomach Infection
+0,0,0,0,0,Healthy
+1,1,0,1,1,Viral Fever
+1,0,0,0,1,Fever
+0,1,1,1,0,Sinus Infection
+1,1,1,0,0,Covid-19
+0,0,1,1,1,Food Allergy
+1,0,1,1,0,Chickenpox
+0,1,0,1,1,Bronchitis
+1,1,0,0,0,Throat Infection
+0,0,1,0,0,Stress Headache
+1,0,0,1,0,Gastric Problem
+0,1,1,0,1,Respiratory Infection
+1,1,1,1,0,Severe Viral Infection
+0,0,0,1,0,Acidity
+1,0,1,0,0,Eye Flu
+0,1,0,0,1,Asthma
+1,1,0,1,0,Pneumonia
+0,0,1,1,0,Motion Sickness
+1,0,0,0,0,Normal Fever
+0,0,0,0,1,Tiredness
