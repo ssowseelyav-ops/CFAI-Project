@@ -1,18 +1,10 @@
-name: Deploy to Render
+name: No deployment configured
 
-on:
-  push:
-    branches:
-      - main
-      - master
+on: []
 
 jobs:
-  deploy:
+  noop:
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Deploy to Render
-      run: |
-        curl -X POST "https://api.render.com/deploy/${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_API_KEY }}"
+      - name: Nothing to deploy
+        run: echo "No deployment configured for this repository."
