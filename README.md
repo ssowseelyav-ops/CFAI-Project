@@ -36,6 +36,19 @@ This project is ready for deployment using a WSGI server like `gunicorn`.
   web: gunicorn app:app
   ```
 
+### PythonAnywhere deployment
+
+1. Create a free account on [PythonAnywhere](https://www.pythonanywhere.com/).
+2. Open the Dashboard and create a new Web App.
+3. Choose `Flask` and the correct Python version.
+4. In the Web tab, set the source code directory to your repo path.
+5. Set the WSGI application file to use `app:app`.
+6. Install dependencies in a Bash console:
+   ```bash
+   pip install -r requirements.txt
+   ```
+7. Reload the web app.
+
 ## Notes
 
 - Make sure `dataset.csv` is present in the repo root.
