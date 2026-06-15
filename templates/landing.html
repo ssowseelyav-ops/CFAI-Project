@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediFlow AI</title>
+
+```
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}"```
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+```
+<div class="logo">
+    <img src="{{ url_for('static', filename='images/logo.png') }}"
+         class="logo-img">
+
+    <span>MediFlow</span>
+</div>
+
+<ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="#about">About</a></li>
+</ul>
+
+<a href="/login">
+    <button class="primary-btn">
+        Get Started
+    </button>
+</a>
+```
+
+</nav>
+
+<section class="hero">
+
+```
+<div class="hero-left">
+
+    <span class="badge">
+        AI Healthcare Platform
+    </span>
+
+    <h1>
+        AI-Powered
+        <span class="gradient-text">
+            Health Intelligence
+        </span>
+    </h1>
+
+    <p>
+        Advanced machine learning technology for
+        accurate disease prediction and better
+        healthcare outcomes.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="/dashboard">
+            <button class="primary-btn">
+                Start Health Assessment
+            </button>
+        </a>
+
+<a href="#about">
+    <button class="secondary-btn">
+        Why MediFlow AI?
+    </button>
+</a>
+
+    </div>
+
+    <div class="stats">
+
+        <div class="stat">
+            <h2>98.2%</h2>
+            <span>Prediction Accuracy</span>
+        </div>
+
+        <div class="stat">
+            <h2>5000+</h2>
+            <span>Assessments</span>
+        </div>
+
+        <div class="stat">
+            <h2>24/7</h2>
+            <span>Health Support</span>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="hero-right">
+
+    <img src="{{ url_for('static', filename='images/doctor.png') }}"
+         class="doctor-img">
+
+</div>
+```
+
+</section>
+<section id="about" class="info-section">
+
+    <h2>About MediFlow AI</h2>
+
+    <p>
+        MediFlow AI is an AI-powered disease prediction system developed
+        using Machine Learning and Flask. The platform analyzes user
+        symptoms and predicts possible diseases while providing
+        personalized healthcare recommendations.
+    </p>
+
+    <br>
+
+    <h3>Project Features</h3>
+
+    <div class="service-cards">
+
+        <div class="card">
+            <h3>🤖 AI Disease Prediction</h3>
+            <p>Predicts diseases using Decision Tree Machine Learning.</p>
+        </div>
+
+        <div class="card">
+            <h3>🩺 30+ Diseases Covered</h3>
+            <p>Supports prediction of multiple diseases based on symptoms.</p>
+        </div>
+
+        <div class="card">
+            <h3>📋 Health Recommendations</h3>
+            <p>Provides disease-specific recommendations and guidance.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Instant Analysis</h3>
+            <p>Generates predictions within seconds.</p>
+        </div>
+
+    </div>
+
+    <br><br>
+
+
+</section>
+
+</body>
+</html>

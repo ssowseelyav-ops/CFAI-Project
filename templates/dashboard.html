@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - MediFlow AI</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <div class="dashboard-card-main">
+
+        <h1>Welcome to MediFlow AI</h1>
+
+        <p>
+            Start your health assessment and get AI-powered disease
+            prediction with personalized healthcare recommendations.
+        </p>
+
+        <a href="/predict">
+            <button class="prediction-btn">
+                Start Health Assessment
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

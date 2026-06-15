@@ -1,47 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Report</title>
 
-<title>Result</title>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
 
-<div class="background"></div>
+<div class="result-container">
 
-<div class="card">
+    <div class="result-card">
 
-<h1>🩺 Prediction Result</h1>
+        <div class="report-header">
 
-<div class="result">
+            <h1>🩺 Health Analysis Report</h1>
 
-{{prediction}}
+            <p>
+                AI-Powered Disease Prediction Summary
+            </p>
 
-</div>
+        </div>
 
-<p class="description">
+        <div class="report-grid">
 
-Hello <b>{{name}}</b>,
-based on the symptoms entered,
-our AI system predicts that you may have
-<b>{{prediction}}</b>.
+            <div class="info-card">
 
-Please consult a healthcare professional
-for proper medical advice.
+                <h3>Predicted Disease</h3>
 
-</p>
+                <div class="prediction-box">
+                    {{ prediction }}
+                </div>
 
-<button onclick="window.location.href='/'">
+            </div>
 
-Start New Analysis
+            <div class="info-card">
 
-</button>
+                <h3>Confidence Score</h3>
+
+                <div class="confidence-circle">
+                    {{ confidence }}%
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="risk-card">
+
+            <h3>Risk Assessment</h3>
+
+            <span class="risk-level">
+                Moderate Risk
+            </span>
+
+        </div>
+
+        <div class="recommendation-card">
+
+            <h3>Recommendations</h3>
+
+            <ul>
+
+                {% for tip in tips %}
+                <li>{{ tip }}</li>
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+        <div class="action-buttons">
+
+            <a href="/predict">
+                <button class="secondary-btn">
+                    New Assessment
+                </button>
+            </a>
+
+            <a href="/">
+                <button class="primary-btn">
+                    Return Home
+                </button>
+            </a>
+
+        </div>
+
+    </div>
 
 </div>
 
 </body>
+
 </html>

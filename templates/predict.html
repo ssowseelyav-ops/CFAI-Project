@@ -1,74 +1,144 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Assessment</title>
 
-<title>Symptoms</title>
-
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
 
-<div class="background"></div>
+<div class="assessment-container">
 
-<div class="card">
+    <div class="assessment-header">
+        <h1>AI Health Assessment</h1>
+        <p>Select your symptoms below</p>
+    </div>
 
-<h1>🧬 Symptoms Analysis</h1>
+    <form action="/result" method="POST">
 
-<div class="info">
+        <div class="symptom-grid">
 
-<b>Name:</b> {{name}} <br>
-<b>Age:</b> {{age}} <br>
-<b>Gender:</b> {{sex}}
+            <!-- Fever -->
+            <div class="symptom-card">
+                <h3>🤒 Fever</h3>
+                <div class="option-group">
+                    <label><input type="radio" name="fever" value="1" required> Yes</label>
+                    <label><input type="radio" name="fever" value="0"> No</label>
+                </div>
+            </div>
 
-</div>
+            <!-- Cough -->
+            <div class="symptom-card">
+                <h3>😷 Cough</h3>
+                <div class="option-group">
+                    <label><input type="radio" name="cough" value="1" required> Yes</label>
+                    <label><input type="radio" name="cough" value="0"> No</label>
+                </div>
+            </div>
 
-<form action="/result" method="POST">
+            <!-- Headache -->
+            <div class="symptom-card">
+                <h3>🤕 Headache</h3>
+                <div class="option-group">
+                    <label><input type="radio" name="headache" value="1" required> Yes</label>
+                    <label><input type="radio" name="headache" value="0"> No</label>
+                </div>
+            </div>
 
-<input type="hidden" name="name" value="{{name}}">
+            <!-- Vomiting -->
+            <div class="symptom-card">
+                <h3>🤢 Vomiting</h3>
+                <div class="option-group">
+                    <label><input type="radio" name="vomiting" value="1" required> Yes</label>
+                    <label><input type="radio" name="vomiting" value="0"> No</label>
+                </div>
+            </div>
 
-<label>Fever</label>
-<select name="fever" required class="gender">
-    <option value="">Select</option>
-    <option value="1">Yes</option>
-    <option value="0">No</option>
-</select>
+            <!-- Fatigue -->
+            <div class="symptom-card">
+                <h3>😴 Fatigue</h3>
+                <div class="option-group">
+                    <label><input type="radio" name="fatigue" value="1" required> Yes</label>
+                    <label><input type="radio" name="fatigue" value="0"> No</label>
+                </div>
+            </div>
 
-<label>Cough</label>
-<select name="cough" required class="gender">
-    <option value="">Select</option>
-    <option value="1">Yes</option>
-    <option value="0">No</option>
-</select>
+            <!-- Body Pain -->
+            <div class="symptom-card">
+                <h3>💪 Body Pain</h3>
+                <div class="option-group">
+                    <label><input type="radio" name="body_pain" value="1" required> Yes</label>
+                    <label><input type="radio" name="body_pain" value="0"> No</label>
+                </div>
+            </div>
 
-<label>Headache</label>
-<select name="headache" required class="gender">
-    <option value="">Select</option>
-    <option value="1">Yes</option>
-    <option value="0">No</option>
-</select>
+            <!-- Sore Throat -->
+            <div class="symptom-card">
+                <h3>🗣️ Sore Throat</h3>
+                <div class="option-group">
+                    <label><input type="radio" name="sore_throat" value="1" required> Yes</label>
+                    <label><input type="radio" name="sore_throat" value="0"> No</label>
+                </div>
+            </div>
 
-<label>Vomiting</label>
-<select name="vomiting" required class="gender">
-    <option value="">Select</option>
-    <option value="1">Yes</option>
-    <option value="0">No</option>
-</select>
+            <!-- Runny Nose -->
+            <div class="symptom-card">
+                <h3>👃 Runny Nose</h3>
+                <div class="option-group">
+                    <label><input type="radio" name="runny_nose" value="1" required> Yes</label>
+                    <label><input type="radio" name="runny_nose" value="0"> No</label>
+                </div>
+            </div>
 
-<label>Fatigue</label>
-<select name="fatigue" required class="gender">
-    <option value="">Select</option>
-    <option value="1">Yes</option>
-    <option value="0">No</option>
-</select>
+            <!-- Skin Rash -->
+            <div class="symptom-card">
+                <h3>🔴 Skin Rash</h3>
+                <div class="option-group">
+                    <label><input type="radio" name="skin_rash" value="1" required> Yes</label>
+                    <label><input type="radio" name="skin_rash" value="0"> No</label>
+                </div>
+            </div>
 
-<button type="submit">
-Analyze Symptoms
-</button>
+            <!-- Joint Pain -->
+            <div class="symptom-card">
+                <h3>🦴 Joint Pain</h3>
+                <div class="option-group">
+                    <label><input type="radio" name="joint_pain" value="1" required> Yes</label>
+                    <label><input type="radio" name="joint_pain" value="0"> No</label>
+                </div>
+            </div>
 
-</form>
+            <!-- Breathing Problem -->
+            <div class="symptom-card">
+                <h3>😮‍💨 Breathing Problem</h3>
+                <div class="option-group">
+                    <label><input type="radio" name="breathing_problem" value="1" required> Yes</label>
+                    <label><input type="radio" name="breathing_problem" value="0"> No</label>
+                </div>
+            </div>
+
+            <!-- Loss of Appetite -->
+            <div class="symptom-card">
+                <h3>🍽️ Loss of Appetite</h3>
+                <div class="option-group">
+                    <label><input type="radio" name="loss_of_appetite" value="1" required> Yes</label>
+                    <label><input type="radio" name="loss_of_appetite" value="0"> No</label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="assessment-button">
+            <button type="submit" class="primary-btn">
+                Analyze Symptoms
+            </button>
+        </div>
+
+    </form>
 
 </div>
 
